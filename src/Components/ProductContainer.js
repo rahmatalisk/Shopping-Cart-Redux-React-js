@@ -8,7 +8,7 @@ const ProductContainer = () => {
   return (
     <div className="productWrapper">
     {
-          (items.length === 0) && <p>No product Found. But you can add.</p>
+          (items.length === 0) && <p>No product found. But you can add.</p>
           ))
         }
       <div className="productContainer" id="lws-productContainer">
