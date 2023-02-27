@@ -7,13 +7,15 @@ const ProductContainer = () => {
   const items = useSelector((state) => state);
   return (
     <div className="productWrapper">
+    {
+          (items.length === 0) && <p>No product Found. But you can add.</p>
+          ))
+        }
       <div className="productContainer" id="lws-productContainer">
-        {/* {items.map((it) => (
-          <ProductItem key={it.id} product={it} />
-        ))} */}
+        
 
         {
-          (items.length === 0) ? <p>No product Found. But you can add.</p> : items.map((it) => (
+          items && items.map((it) => (
             <ProductItem key={it.id} product={it} />
           ))
         }
